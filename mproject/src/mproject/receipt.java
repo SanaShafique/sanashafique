@@ -9,15 +9,12 @@ package mproject;
  *
  * @author Fawad computer
  */
-public class Mproject {
+public class receipt {
+    public String itemname;
+    public String employeename;
+    public String numofitem;
+    public String signature;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        NewJFrame l= new NewJFrame();
-        l.setVisible(true);
-    }
+  
     
 }
