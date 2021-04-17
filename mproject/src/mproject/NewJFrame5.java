@@ -4,6 +4,11 @@
  * and open the template in the editor.
  */
  package mproject;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Fawad computer
@@ -49,7 +54,12 @@ public class NewJFrame5 extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("SHOW RECEIPT");
 
-        jButton1.setText("ENTER HERE");
+        jButton1.setText("ISSUE RECEIPT");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("NAME OF EMPLOYEE");
 
@@ -114,6 +124,20 @@ public class NewJFrame5 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+         String m= jTextField1.getText();
+       String n=jTextField3.getText();
+       String o=jTextField2.getText();
+       List <receipt> list3 =new ArrayList <receipt>();
+       receipt ab=new receipt();
+       ab.itemname=m;
+       ab.employeename=n;
+       ab.numofitem=o;
+       list3.add(ab);
+        JOptionPane.showMessageDialog(this,"reciept has been issued");
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
